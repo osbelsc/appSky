@@ -20,6 +20,10 @@
     border: 2px solid rgb(83, 82, 82);
     box-shadow: 3px 3px 3px rgb(61, 60, 60);
 }
+.divInfo{
+   
+    height: 15rem;
+}
 
 h1 {
     color: aliceblue;

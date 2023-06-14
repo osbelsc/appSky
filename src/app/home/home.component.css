@@ -1,15 +1,16 @@
-@import url('https://fonts.cdnfonts.com/css/egosta');
+
 
 
 main {
     padding: 3rem;
     color: rgb(0, 0, 0);
     text-align: center;
+   
 }
 main a {
 
     color:rgb(255, 255, 255);
-    font-family: egosta;
+    font-family: 'egosta';
 }
 #custom-cards{
     color: rgb(0, 0, 0);
