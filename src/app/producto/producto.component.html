@@ -13,46 +13,54 @@
             </form>
         </div>
         <div class=" col-md-7 align-items-md-stretch my-4">
-                <div class="h-100 p-5 text-white bg-dark rounded-3">
-                    <h2>Listado de productos de alta calidad.</h2>
-                    <p> Encontrarás una amplia variedad de opciones que se adaptarán a tus necesidades y preferencias. Desde productos electrónicos hasta
-                        artículos para el hogar y la belleza, nuestra selección ha sido cuidadosamente elegida
-                        para ofrecerte lo mejor. Todos nuestros productos son de marcas reconocidas y cuentan
-                        con garantía de calidad para asegurar tu satisfacción. Descubre las opciones que
-                        tenemos para ti y encuentra el producto que estás buscando.
-                    </p>
-                    <button class="btn btn-outline-light" type="button">Example button</button>
+            <div class="h-100 p-5 text-white bg-dark rounded-3">
+                <h2>Listado de productos de alta calidad.</h2>
+                <p> Encontrarás una amplia variedad de opciones que se adaptarán a tus necesidades y preferencias. Desde
+                    productos electrónicos hasta
+                    artículos para el hogar y la belleza, nuestra selección ha sido cuidadosamente elegida
+                    para ofrecerte lo mejor. Todos nuestros productos son de marcas reconocidas y cuentan
+                    con garantía de calidad para asegurar tu satisfacción. Descubre las opciones que
+                    tenemos para ti y encuentra el producto que estás buscando.
+                </p>
+                <button class="btn btn-outline-light" type="button">Example button</button>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+<h1>Listado de productos</h1>
+<hr>
+
+
+
+<div class="container">
+    <button (click)="toggleProductdetail()"></button>
+   
+    <ul class="row">
+        <li class="col-sm-3" *ngFor="let producto of Productos let i=index">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" [src]="producto.images[0]" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{producto.title}}</h5>
+                  
+                    <button type="button" class="btn btn-primary " (click)="showDetail()">show detail
+                    </button>
                 </div>
             </div>
-            
 
 
-                </div>
-            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="divInfo" (click)="toggleProductdetail()" [class.active]="showProductDetail">
+    <div>
+        <button>x</button>
+        <p></p>
+    </div>
 
 
-
-
-
-
-            <div class="container">
-
-                <ul class="row">
-                    <li class="col-sm-3" *ngFor="let producto of Productos let i=index">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" [src]="producto.images[0]" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">{{producto.title}}</h5>
-                                <p class="card-text">{{producto.price}} $</p>
-
-                                <div class="d-flex">
-                                    <button type="button" class="btn btn-warning" [routerLink]="['/accionProducto',i]"
-                                        (click)="updateProduct(i)">Update</button>
-                                    <button type="button" class="btn btn-danger" [routerLink]="['/accionProducto',i]"
-                                        (click)="deleteProduct(i)">Delete</button>
-                                </div>
-                            </div>
-                        </div>
-
-                    </li>
-                </ul>
+</div>

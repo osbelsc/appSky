@@ -16,24 +16,36 @@
     width: 25rem;
     height: 40rem;
     margin: 2rem;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 2px solid rgb(83, 82, 82);
     box-shadow: 3px 3px 3px rgb(61, 60, 60);
 }
 .divInfo{
-   
-    height: 15rem;
+    position: fixed;
+    top :0;
+    left: 75%;
+    bottom: 0;
+    right: 0;
+    background: #F1F6F9;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: all ease-out .5s;
+    transform: translateX(100%);
+    &.active{
+        transform: translateX(0) ;
+    }
 }
 
 h1 {
-    color: aliceblue;
+    margin-top: 3rem;
+    color: black;
     text-align: center;
 }
 
 hr {
-    color: aliceblue;
-    border: dashed 1px;
-    width: 10%;
+    color: black;
+    width: 40%;
     margin: 0 auto;
     margin-bottom: 1rem;
 }

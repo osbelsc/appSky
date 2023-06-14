@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../service/api.service';
 import { IProduct, CreateProducto, UpdateProducto } from '../Model/producto';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -8,7 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './accion-producto.component.html',
   styleUrls: ['./accion-producto.component.css']
 })
-export class AccionProductoComponent {
+export class AccionProductoComponent implements OnInit {
   title: string = ""
   price: number = 0;
   description: string = "";
@@ -20,20 +20,25 @@ export class AccionProductoComponent {
 
   ngOnInit(): void {
     //get products
-    this.api.getProducto().subscribe(
+    this.api.getAllProducto().subscribe(
       data => { this.Productos = data },
       error => { error }
     );
     this.index = this.route.snapshot.params["id"];
+    let productoAct:CreateProducto = this.api.foundProduct(this.index);
+    this.title=productoAct.title;
+    this.price=productoAct.price;
+    this.description=productoAct.description;
   }
-  actualizarProyecto() {
+  actualizarProducto() {
     let newProducto = this.Productos[this.index];
     this.api.updateProductPUT(this.index, newProducto);
     this.router.navigate(['producto']);
 
   }
-  eliminarProyecto() {
+  eliminarProducto() {
     this.api.deleteProduct(this.index);
     this.router.navigate(['proyectos']);
   }
-}
+  }
+  

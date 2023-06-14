@@ -7,18 +7,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductoComponent } from './producto/producto.component';
 import { ApiService } from './service/api.service';
 import { RouterModule, Routes } from '@angular/router';
-import { ContatosComponent } from './contatos/contatos.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgOptimizedImage } from '@angular/common';
-import { FilterPipe } from './Pipes/filter.pipe';
+//import { FilterPipe } from './Pipes/filter.pipe';
 import { AccionProductoComponent } from './accion-producto/accion-producto.component';
+import { ContactosComponent } from './contactos/contactos.component';
 
 
 const Approutes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'producto', component: ProductoComponent },
-  { path: 'contacto', component: ContatosComponent },
+  { path: 'contacto', component: ContactosComponent },
+  { path: 'accion-producto', component: AccionProductoComponent },
   
 ];
 
@@ -26,9 +27,8 @@ const Approutes: Routes = [
   declarations: [
     AppComponent,
     ProductoComponent,
-    ContatosComponent,
+    ContactosComponent,
     HomeComponent,
-    FilterPipe,
     AccionProductoComponent,
     
   ],
