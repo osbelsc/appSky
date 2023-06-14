@@ -1,0 +1,38 @@
+<div class="designForm">
+    <h4>Agregar Productos</h4>
+    <form>
+        <input class="form-control" type="text" placeholder="title" [(ngModel)]="title" name="title"><br>
+        <input class="form-control" type="text" placeholder="price" [(ngModel)]="price" name="price"><br>
+        <textarea class="form-control" placeholder="descripcion" cols="30" rows="10" [(ngModel)]="description"
+            name="description"></textarea><br>
+        <input class="form-control" type="file" name="inserta la imagen" [(ngModel)]="image">
+        <br>
+        <button type="button" class="btn btn-success" (click)="createProduct()">Insertar</button>
+    </form>
+</div>
+
+
+
+<h1>listado de productos</h1>
+<hr>
+
+<div class="container">
+    <ul class="row">
+        <li class="col-sm-3" *ngFor="let producto of Productos let i=index">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" [src]="producto.images[0]" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">{{producto.title}}</h5>
+                  <p class="card-text">{{producto.price}} $</p>
+                 
+                  <div class="d-flex">
+                    <button type="button" class="btn btn-warning" [routerLink]="['/accionProducto',i]"
+                        (click)="updateProduct(i)">Update</button>
+                    <button type="button" class="btn btn-danger" [routerLink]="['/accionProducto',i]"
+                        (click)="deleteProduct(i)">Delete</button>
+                </div>
+                </div>
+              </div>
+            
+        </li>
+    </ul>

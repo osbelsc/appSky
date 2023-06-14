@@ -1,0 +1,51 @@
+@import url('https://fonts.cdnfonts.com/css/jingadile');
+
+
+@import url('https://fonts.cdnfonts.com/css/egosta');
+
+
+
+
+html{
+    background-color: #27374D;
+    font-size: large;
+}
+nav {
+    font-family:egosta;
+    display: flex;
+    
+    padding-left: 5rem;
+    padding-right: 5rem;
+    box-shadow: 5px 5px 5px rgb(61, 60, 60);
+
+}
+
+
+nav ul {
+    justify-content: space-around;
+    color: rgb(255, 255, 255);
+}
+
+body {
+    background-color: #F1F6F9 ;
+}
+
+nav .div1 {
+    flex: 2;
+    font-family: 'jingadile', sans-serif;
+
+}
+
+nav .collapse {
+    flex: 1;
+}
+
+.aside {
+    background-color: #9fc6fd;
+    
+   
+}
+
+.main {
+    font-family: egosta;
+}

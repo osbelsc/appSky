@@ -1,0 +1,16 @@
+body{
+    background-color:#F1F6F9;
+}
+.designdiv{
+    background-color: azure ;
+    width: 30rem;
+    margin: 2rem;
+    border-radius: 5px ;
+    border:2px solid #2E4F4F;
+}
+.designdiv span{
+margin: 2rem;
+}
+.btn {
+    margin: 1rem;
+}

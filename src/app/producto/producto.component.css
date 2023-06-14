@@ -1,0 +1,46 @@
+.card {
+    
+    align-items:stretch;
+    margin: 1rem;
+    border-radius: 3px;
+    
+}
+
+.designProducto img {
+    border-radius: 3px;
+}
+
+.designForm {
+    background-color: #F1F6F9;
+    padding: 10px;
+    width: 25rem;
+    height: 40rem;
+    margin: 2rem;
+    border-radius: 5px;
+    border: 2px solid rgb(83, 82, 82);
+    box-shadow: 3px 3px 3px rgb(61, 60, 60);
+}
+
+h1 {
+    color: aliceblue;
+    text-align: center;
+}
+
+hr {
+    color: aliceblue;
+    border: dashed 1px;
+    width: 10%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+.container ul {
+    list-style: none;
+}
+
+.container ul li {
+    margin: 2rem;
+}
+.container ul button{
+    margin-left: 2rem;
+}

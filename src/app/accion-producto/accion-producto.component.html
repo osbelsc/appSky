@@ -1,0 +1,10 @@
+
+<form >
+    <input type="text" name="nombre" placeholder="title" [(ngModel)]="title">
+    <input type="number" name="empresa" placeholder="price" [(ngModel)]="price">
+    <input type="textarea"name="costo" placeholder="dscription" [(ngModel)]="description">
+
+    <input type="button" value="modificar" class="btn btn-warning" (click)="actualizarProyecto()" >
+    <input type="button" value="eliminar" class="btn btn-danger" (click)="eliminarProyecto()" >
+    
+</form>

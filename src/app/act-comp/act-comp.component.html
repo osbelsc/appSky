@@ -1,0 +1,10 @@
+<p>act-comp works!</p>
+<form >
+    <input type="text" name="nombre" placeholder="Nombre" [(ngModel)]="nombre">
+    <input type="text" name="empresa" placeholder="Empresa" [(ngModel)]="empresa">
+    <input type="number"name="costo" placeholder="costo" [(ngModel)]="costo">
+
+    <input type="button" value="modificar" class="btn btn-warning" (click)="actualizarProyecto()" >
+    <input type="button" value="eliminar" class="btn btn-danger" (click)="eliminarProyecto()" >
+    
+</form>
